@@ -1,4 +1,4 @@
-# 🎓 Projetos da Faculdade
+git# 🎓 Projetos da Faculdade
 
 Bem-vindo! Este repositório contém todos os projetos que estou desenvolvendo durante minha graduação em Sistemas de Informação. Aqui, você encontrará detalhes sobre cada projeto, incluindo como eles foram feitos, as tecnologias utilizadas, e o que aprendi durante o processo.
 
