@@ -1,27 +1,23 @@
 # Projetos
 
-Olá! Este repositório contém todos os projetos que vou criando, acompanhando meu aprendizado. Tanto projetos da faculdade quanto de outras fontes poderão ser encontradas aqui. Espere encontrará detalhes sobre cada projeto, incluindo como eles foram feitos, as tecnologias utilizadas, e o que aprendi durante o processo.
+Olá! Este repositório contém todos os projetos que vou criando, acompanhando meu aprendizado. Tanto projetos da faculdade quanto de outras fontes poderão ser encontrados aqui. Espere encontrar detalhes sobre cada projeto, incluindo como eles foram feitos, as tecnologias utilizadas, e o que aprendi durante o processo.
 
 ## 📌 Objetivo
 
-Aprendizado contínuo, sempre aprender conteúdos novos e me aprofundar nos que já conheço.
+Aprendizado contínuo, sempre buscando novos conhecimentos e me aprofundando nos que já conheço.
 
 Também tem como foco:
 
-- **Documentação e Organização**: Manter registrado todo o conhecimento como projetos, atividades, cursos em andamento, que com certeza vou consultar futuramente.
-- **Desenvolvimento Pessoal**: Alinhar meu conhecimento com a prática, e estar sempre me movimentando (Melhoria contínua) 
+- **Documentação e Organização**: Manter registrado todo o conhecimento, como projetos, atividades, e cursos em andamento, para consulta futura.
+- **Desenvolvimento Pessoal**: Alinhar meu conhecimento com a prática e sempre me movimentar (Melhoria contínua).
 - **Portfólio**: Construir um portfólio que mostre minha evolução ao longo do tempo.
 
-
-
-
-
 ## 🗂️ Atividades e projetos
-Te convido a ver meus projetos da faculdade: [Clique aqui](Faculdade)
-Te convido a ver meus projetos independentes: [Clique aqui](null) (ainda desativado)
 
+Te convido a ver meus projetos da faculdade: [Clique aqui](https://github.com/matteushr/Faculdade)
 
-## 📖 Abou
+Te convido também a ver meus projetos independentes: [Clique aqui](https://github.com/matteushr/projeto-independente) (ainda desativado)
 
+## 📖 Sobre
 
 *Repositório atualmente em atividade.*
