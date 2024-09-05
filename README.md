@@ -1,10 +1,12 @@
-# Projetos da Faculdade
+# Projetos
 
-Bem-vindo! Este repositório contém todos os projetos relacionados a minha graduação. Aqui, você encontrará detalhes sobre cada projeto, incluindo como eles foram feitos, as tecnologias utilizadas, e o que aprendi durante o processo.
+Olá! Este repositório contém todos os projetos que vou criando, acompanhando meu aprendizado. Tanto projetos da faculdade quanto de outras fontes poderão ser encontradas aqui. Espere encontrará detalhes sobre cada projeto, incluindo como eles foram feitos, as tecnologias utilizadas, e o que aprendi durante o processo.
 
-## 📌 Objetivos
+## 📌 Objetivo
 
-Este repositório tem como objetivo:
+Aprendizado contínuo, sempre aprender conteúdos novos e me aprofundar nos que já conheço.
+
+Também tem como foco:
 
 - **Documentação e Organização**: Manter registrado todo o conhecimento como projetos, atividades, cursos em andamento, que com certeza vou consultar futuramente.
 - **Desenvolvimento Pessoal**: Alinhar meu conhecimento com a prática, e estar sempre me movimentando (Melhoria contínua) 
@@ -12,8 +14,11 @@ Este repositório tem como objetivo:
 
 
 
+
+
 ## 🗂️ Atividades e projetos
-[Clique aqui](teste)
+Te convido a ver meus projetos da faculdade: [Clique aqui](Faculdade)
+Te convido a ver meus projetos independentes: [Clique aqui](null) (ainda desativado)
 
 
 ## 📖 Abou
