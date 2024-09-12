@@ -16,7 +16,7 @@ Também tem como foco:
 
 Te convido a ver meus projetos da faculdade: [Clique aqui](https://github.com/matteushr/Faculdade)
 
-Te convido também a ver meus projetos independentes: [Clique aqui](https://github.com/matteushr/projeto-independente) (ainda desativado)
+Te convido também a ver meus projetos e estudos independentes: [Clique aqui](https://github.com/matteushr/Outros-estudos)
 
 ## 📖 Sobre
 
