@@ -1,0 +1,5 @@
+uma solução apenas com a inserção de bolhas/NOP;
+uma técnica com inserção de adiantamentos;
+e outra técnica com reordenamento de instruções.
+Deverá ser possível escolher a combinação dessas técnicas.
+A seguir há três exemplo de arquivo de entrada e saída:
