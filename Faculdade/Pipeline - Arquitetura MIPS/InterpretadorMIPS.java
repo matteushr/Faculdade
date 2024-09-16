@@ -1,79 +1,63 @@
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class InterpretadorMIPS {
 
-    private File[] arquivos;
-    public List<String> instructions;
-    private ListaDE parsedInstructions;
-    private Leitor leitor;
+    public List<String> instrucoes;
 
     public InterpretadorMIPS() throws IOException {
-        leitor = new Leitor();
-        arquivos = leitor.localizarArquivos("Testes");
-        instructions = new ArrayList<String>();
+
+        instrucoes = new ArrayList<String>();
     }
 
     /**
+     * Lê cada linha de instrução do arquivo e formata para conter apenas espaços simples, oque
+     * formaliza o formato e torna a interpretação das instruções mais simples.
+     * 
+     * Ao formatar, envia esta linha para uma lista, que conterá todas as instruções
      * 
      *
-     * @param arquivoParaModificar Arquivo para leitura e interpretação
-     * @throws IOException 
+     * @param arquivo Arquivo para leitura e interpretação
+     * @throws IOException
      * 
      */
 
-     public void lerTodosArquivos() throws IOException {
-        
-            readFile(arquivos[1]);
-        
-     }
-
-    public void readFile(File arquivo) throws IOException {
+    public void lerArquivo(File arquivo) throws IOException {
 
         // String ArquivoNovoGerado = arquivoParaModificar.getName().replace(".txt", "")
         // + "-RESULTADO.txt";
+        System.out.println("\nLENDO ARQUIVO "+arquivo.getName()+". ELE POSSUI O SEGUINTE CONTEÚDO:");
+        BufferedReader leitorDeArquivo = new BufferedReader(new FileReader(arquivo));
 
-       
+        // O parâmetro true indica que eu tenho a intenção de escrever, em vez de
+        // sobescrever o arquivo.
+        // BufferedWriter escritor = new BufferedWriter(new
+        // FileWriter(ArquivoNovoGerado, true));
 
-            BufferedReader leitorDeArquivo = new BufferedReader(new FileReader(arquivo));
+        String linhaDaInstrucao;
+        while ( (linhaDaInstrucao = leitorDeArquivo.readLine()) != null) {
 
-            // O parâmetro true indica que eu tenho a intenção de escrever, em vez de
-            // sobescrever o arquivo.
-            // BufferedWriter escritor = new BufferedWriter(new
-            // FileWriter(ArquivoNovoGerado, true));
-
-            String line;
-            while ((line = leitorDeArquivo.readLine()) != null) {
-                String linhaFormatada = line.trim().replaceAll("\\s+", " ");
-                instructions.add(linhaFormatada);
-            }
-            // escritor.close();
-            leitorDeArquivo.close();
+            String linhaFormatada = linhaDaInstrucao.trim().replaceAll("\\s+", " ");
+            instrucoes.add(linhaFormatada);
+        }
+        // escritor.close();
+        leitorDeArquivo.close();
 
     }
 
-    
-        public <T> void imprimirLista(List<T> lista) {
-            System.out.println("Elementos de instrução mips na lista:");
-            for (T elemento : lista) {
-                System.out.println(elemento);
-            }
+    public <T> void imprimirLista(List<T> lista) {
+        System.out.println("\nElementos de instrução mips na lista:");
+        for (T elemento : lista) {
+            System.out.print(elemento + ", ");
+        }
     }
-    
 
-
-public static void main(String[] args) throws IOException {
-    InterpretadorMIPS i = new InterpretadorMIPS();
-
-    i.lerTodosArquivos();
-    i.imprimirLista(i.instructions);
-
-}
+    public List<String> getInstrucoes() {
+        return instrucoes;
+    }
 
 }

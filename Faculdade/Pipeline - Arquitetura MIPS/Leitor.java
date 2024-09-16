@@ -32,25 +32,39 @@ public class Leitor {
      *
      * 
      */
-    public File[] localizarArquivos(String diretorio) throws IOException {
+    public boolean localizouArquivos(String diretorio) throws IOException {
         File directory = new File(diretorio);
 
         if (!directory.isDirectory()) {
             System.out.println("O caminho fornecido não é um diretório.");
-            return null;
+            return false; // Diretório inválido
         }
 
-        File[] arquivos = directory.listFiles((dir, name) -> name.endsWith(".txt"));
-
-        if (arquivos == null || arquivos.length == 0) {
+        // Verifica se existem arquivos .txt no diretório
+        File[] arquivosTxt = directory.listFiles((dir, name) -> name.endsWith(".txt"));
+        if (arquivosTxt == null || arquivosTxt.length == 0) {
             System.out.println("Nenhum arquivo .txt encontrado no diretório.");
-            return null;
+            return false; // Nenhum arquivo .txt encontrado
         }
 
-        return arquivos;
+        return true; // Diretório e arquivos .txt encontrados
     }
 
-    // private void processarArquivo()
+    // Retorna os arquivos .txt do diretório
+    public File[] receberArquivos(String diretorio) {
+        File directory = new File(diretorio);
+        
+        File[] diretorios = directory.listFiles((dir, name) -> name.endsWith(".txt"));
+        System.out.println("ARQUIVOS LOCALIZADOS. AQUIVOS:\n");
+        for(File diretoriox: diretorios) {
+            System.out.println(diretoriox.getName());
+        }
+
+        return diretorios;
+    }
+
+
+    
 
 
 }
