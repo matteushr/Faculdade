@@ -1,0 +1,21 @@
+add $t0, $t1, $t2  
+sub $t3, $t4, $t5  
+mul $t6, $t7, $t0  
+div $t1, $t2, $t3  
+lw $t4, 500($t5)  
+sw $t6, 1500($t7)  
+addi $t0, $t3, 15  
+andi $a3, $a2, 0x1F  
+ori $a5, $a0, 0xF0  
+xor $a1, $a6, $a4  
+slt $a7, $a2, $a5  
+beq $a0, $a3, labelD  
+bne $a4, $a1, labelE  
+xor $t7, $t6, $t5  
+slt $t0, $t3, $t1  
+lui $t2, 0xABCD  
+sw $t1, 2000($t0)  
+lw $t5, 3500($t4)  
+addi $t6, $t2, -10  
+mul $t3, $t5, $t7  
+div $t4, $t6, $t1  

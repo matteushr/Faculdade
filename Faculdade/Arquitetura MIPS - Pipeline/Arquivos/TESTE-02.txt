@@ -1,0 +1,73 @@
+add $t1, $s3, $t1  
+sw $t1, 1300($t2)  
+lw $t2, 1400($t3)  
+add $t2, $s4, $t2  
+sw $t2, 1400($t3)  
+sub $t4, $t2, $s2  
+lw $t1, 1200($t5)  
+add $t3, $t1, $s1  
+sw $t3, 1600($t6)  
+lw $t4, 1100($t7)  
+add $t2, $t4, $t2  
+sw $t2, 1500($t3)  
+mul $t1, $s5, $t1  
+div $t4, $t2, $s2  
+mflo $t5  
+sw $t5, 1700($t2)  
+addi $t6, $t1, 100  
+beq $t1, $t2, label1  
+bne $t3, $s4, label2  
+j label3  
+label1:  
+nop  
+label2:  
+and $t4, $t1, $t2  
+or $t5, $t3, $s1  
+xor $t6, $s2, $t4  
+lui $t7, 0x1234  
+lw $t1, 2000($t7)  
+sw $t1, 1800($t6)  
+slti $t2, $t3, 50  
+slt $t4, $t1, $s2  
+sll $t5, $t4, 2  
+srl $t6, $t5, 3  
+jr $ra  
+jal target  
+target:  
+nop  
+add $t1, $s5, $t6  
+sub $t2, $t1, $t7  
+mul $t3, $t2, $s1  
+div $t4, $t3, $t5  
+mflo $t1  
+sw $t1, 1900($t3)  
+lw $t2, 1700($t4)  
+beq $t2, $s3, label4  
+bne $t1, $s6, label5  
+label4:  
+nop  
+label5:  
+and $t5, $t2, $s7  
+or $t6, $t3, $t1  
+xor $t7, $s5, $t4  
+addi $t1, $t2, -100  
+slti $t3, $s6, 25  
+slt $t4, $t7, $t1  
+sll $t5, $t6, 1  
+srl $t7, $t5, 4  
+lw $t1, 1500($t6)  
+sw $t2, 1600($t7)  
+lui $t3, 0xABCD  
+addi $t4, $t1, 50  
+beq $t4, $s7, label6  
+bne $t5, $s3, label7  
+label6:  
+nop  
+label7:  
+sw $t6, 1700($t4)  
+lw $t7, 1800($t5)  
+add $t1, $t6, $t3  
+sub $t2, $t7, $s4  
+mul $t3, $t1, $t2  
+div $t4, $s6, $t1  
+mflo $t5  
