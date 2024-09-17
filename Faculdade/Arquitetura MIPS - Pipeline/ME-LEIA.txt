@@ -1,0 +1,31 @@
+
+
+*******************************************************************
+
+Para executar o programa, jogue os arquivos dentro do diretório Arquivos, e execute a classe Main.java
+
+********************************************************************
+
+
+Como funciona esta estrutura de tratamento de Hazards do tipo RAW?
+
+class Leitor - Identifica o diretório onde estão os arquivos.txt a serem trabalhados e os salva em um array
+do tipo Files[], que é enviado para a classe InterpretadorMIPS.
+
+class InterpretadorMIPS - Recebe arquivos individualmente, onde interpreta cada linha, implementa um tipo de formatação
+com espaços simples para a linha da instrução e salva em uma lista dinâmica, que será recebida pela classe MIPSProcessor
+
+class MIPSProcessor - É a classe que une as funcionalidades em um só. Assim que o método executar() é chamado, um vetor com todos
+os arquivos será recebido, e começa um loop que vai até o último arquivo. Neste loop, cada linha de instrução da lista de instruções
+é dividido em uma sub-lista, contendo partes menores como opcode e registrador. E então, adicionada a uma lista principal, contendo então
+todas as sub-listas. Então, é aplicada a lógica para saber qual arquivo deve receber a técnica de resolução do conflito.
+
+Assim que a lista é modificada, é enviada para a classe Escritor.
+
+Classe Escritor - Esta classe recebe o nome do arquivo, a lista de sub-listas modificada e os adiciona em um novo txt contendo o resultado.
+
+Outras classes:
+
+Classe Opcode - Responsável por fazer a verificação dos Opcodes que podem causar Hazard RAW e também dos registradores.
+
+Classe Solucoes - Responsável por implementar as técnicas de resolução dos Hazards RAW.
