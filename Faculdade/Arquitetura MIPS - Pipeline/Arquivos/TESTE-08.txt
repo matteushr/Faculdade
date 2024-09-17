@@ -1,0 +1,15 @@
+
+lw $t1, 1200($t5)  
+add $t3, $t1, $s1  
+sw $t3, 1600($t6)  
+lw $t4, 1100($t7)  
+add $t2, $t4, $t2 
+sll $t5, $t6, 1  
+srl $t7, $t5, 4  
+lw $t1, 1500($t6)  
+sw $t2, 1600($t7)  
+lui $t3, 0xABCD  
+addi $t4, $t1, 50  
+beq $t4, $s7, label6  
+bne $t5, $s3, label7  
+label6:  

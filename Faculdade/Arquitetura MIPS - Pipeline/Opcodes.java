@@ -62,17 +62,19 @@ public class Opcodes {
 
     public void listarRegistradores() {
         // Registradores $s (salvos)
-        registradores.add("$s0");
-        registradores.add("$s1");
-        registradores.add("$s2");
-        registradores.add("$s3");
-        registradores.add("$s4");
-        registradores.add("$s5");
-        registradores.add("$s6");
-        registradores.add("$s7");
-
-        // Registradores $t (temporários)
-        registradores.add("$t0");
+        registradores.add("$zero"); // Registrador zero (sempre contém o valor 0)
+        registradores.add("$at"); // Registrador assembler temporary
+        registradores.add("$v0"); // Registrador para valores de retorno
+        registradores.add("$v1"); // Registrador para valores de retorno
+        registradores.add("$a0"); // Registrador para argumentos
+        registradores.add("$a1");
+        registradores.add("$a2");
+        registradores.add("$a3");
+        registradores.add("$a4"); // Registrador adicional de argumento
+        registradores.add("$a5"); // Registrador adicional de argumento
+        registradores.add("$a6"); // Registrador adicional de argumento
+        registradores.add("$a7"); // Registrador adicional de argumento
+        registradores.add("$t0"); // Registradores temporários
         registradores.add("$t1");
         registradores.add("$t2");
         registradores.add("$t3");
@@ -82,22 +84,27 @@ public class Opcodes {
         registradores.add("$t7");
         registradores.add("$t8");
         registradores.add("$t9");
-
-        // Registradores especiais
-        registradores.add("$zero"); // Registrador zero (sempre contém o valor 0)
-        registradores.add("$at"); // Registrador assembler temporary
-        registradores.add("$v0"); // Registrador para valores de retorno
-        registradores.add("$v1"); // Registrador para valores de retorno
-        registradores.add("$a0"); // Registrador para argumentos
-        registradores.add("$a1");
-        registradores.add("$a2");
-        registradores.add("$a3");
+        registradores.add("$t10"); // Registradores temporários adicionais
+        registradores.add("$t11");
+        registradores.add("$t12");
+        registradores.add("$t13");
+        registradores.add("$t14");
+        registradores.add("$t15");
+        registradores.add("$s0"); // Registradores de salvamento
+        registradores.add("$s1");
+        registradores.add("$s2");
+        registradores.add("$s3");
+        registradores.add("$s4");
+        registradores.add("$s5");
+        registradores.add("$s6");
+        registradores.add("$s7");
         registradores.add("$k0"); // Registrador reservado para o kernel
         registradores.add("$k1"); // Registrador reservado para o kernel
         registradores.add("$gp"); // Registrador ponteiro global
         registradores.add("$sp"); // Registrador ponteiro de pilha
         registradores.add("$fp"); // Registrador de quadro de pilha (frame pointer)
         registradores.add("$ra"); // Registrador de retorno de endereço
+        
     }
 
     public boolean contemOpcodeHazard(List<String> instrucao) {
@@ -111,8 +118,9 @@ public class Opcodes {
                 return token;  // Retorna o registrador encontrado
             }
         }
+        return " ";
         // Se o método for chamado, sempre terá um registrador, então não precisa de um caso alternativo.
-        throw new IllegalArgumentException("Nenhum registrador encontrado, isso não deveria acontecer.");
+        //throw new IllegalArgumentException("Nenhum registrador encontrado, isso não deveria acontecer. Instrucao defeituosa: ");
     }
     
     public boolean contemRegistrador(List<String> instrucao) {
@@ -124,5 +132,5 @@ public class Opcodes {
         }
         return false;  // Retorna false se nenhum registrador for encontrado
     }
-    
+   
 }

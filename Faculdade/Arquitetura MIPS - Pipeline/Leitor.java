@@ -6,16 +6,15 @@
  * @author Matheus Henrique Araujo
  */
 
-import java.io.BufferedReader;
+
 import java.io.File;
-import java.io.FileReader;
+
 import java.io.IOException;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.util.*;
-import java.util.regex.Pattern;
+
 
 public class Leitor {
+
+    private final String DIRETORIO = "Arquivos";
 
     public Leitor() {
 
@@ -51,8 +50,8 @@ public class Leitor {
     }
 
     // Retorna os arquivos .txt do diretório
-    public File[] receberArquivos(String diretorio) {
-        File directory = new File(diretorio);
+    public File[] receberArquivos() {
+        File directory = new File(getDiretorio());
         
         File[] diretorios = directory.listFiles((dir, name) -> name.endsWith(".txt"));
         System.out.println("ARQUIVOS LOCALIZADOS. AQUIVOS:\n");
@@ -61,6 +60,10 @@ public class Leitor {
         }
 
         return diretorios;
+    }
+
+    public String getDiretorio() {
+        return DIRETORIO;
     }
 
 
